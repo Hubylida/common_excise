@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+        }
+        #left{
+            width: 200px;
+            height: 100%;
+            float: left;
+            background: #444;
+        }
+        #right{
+            width: 200px;
+            height: 100%;
+            float: right;
+            background: #444;
+        }
+        #main{
+
+            height: 100%;
+            margin: 0 200px;  
+            /* position: absolute;
+            left: 200px;
+            right: 200px; */
+            background: #e38383;
+        }
+    </style>
+</head>
+<body>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="main"></div>
+    <!-- main要放在最后面，可以用绝对定位也可以用外边距 -->
+</body>
+</html>
