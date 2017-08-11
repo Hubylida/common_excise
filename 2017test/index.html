@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximun=1,minimum=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+            font-size: 100%;
+        }
+        .contain{
+            width: 100%;
+            position: relative;
+            height: 100%;
+        }
+        .header{
+            width: 100%;
+            height: 15%;
+            background: #8e8e8e;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 999;
+            border-bottom: 8px solid #ff9800;
+        }
+        .header-c{
+            width: 1310px;
+            margin: 0 auto;
+            height: 100%;
+        }
+        #title{
+            font-size: 4.5rem;
+            font-family: "Whitney Cond A", "Whitney Cond B","Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+            color: #fff;
+        }
+        .header a{
+            display: inline-block;
+            text-decoration: none;
+            color: #c3fffa;
+            font-size: 28px;
+            width: 150px;
+            text-align: center;
+        }
+        .header a:hover{
+            background: rgba(255,255,255,0.5);
+        }
+        form{
+            display: inline-block;
+        }
+        #search{
+            border-style: none;
+            width: 285px;
+            line-height: 35px;
+            font-size: 18px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            padding-left: 5px;
+        }
+        #submit{
+            border-style: none;
+            width: 75px;
+            font-size: 18px;
+            line-height: 35px;
+            margin-left: -5px;
+            outline: none;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+         #side_left{
+            position: fixed;
+            left: 0;
+            top: 15%;
+            width: 313px;
+            height: 100%;
+            background: url('side.jpg');
+        }
+        #side_right{
+            position: fixed;
+            top: 15%;
+            right: 0;
+            width: 313px;
+            height: 100%;
+            background: url('side.jpg');
+        }
+
+        .main{
+            position: absolute;
+            top: 15%;
+            left: 313px;
+            right: 313px;
+            height: 85%;
+        }
+        .left,.right{
+            width: 50%;
+            height: 100%;
+            line-height: 2em;
+            text-align: center;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        em{
+            display: block;
+            font-size: 34px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        em:hover{
+            color: #e38383;
+        }
+        .left img,.right img{
+            margin: 20px 0px;
+            width: 70%;
+        }
+        .left p,.right p{
+            font-size: 16px;
+            width: 70%;
+            text-align: justify;
+            display: inline-block;
+        }
+        @media screen and (max-width: 1300px){
+            .left,.right{
+                width: 100%;
+                height: 130%
+            }
+            form{
+                display: none;
+            }
+            .header-c{
+                width: 940px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="header">
+            <div class="header-c">
+            <span id="title">Hubylida</span>
+           <a href="#">Home</a>
+           <a href="#">Movie</a>
+           <a href="#">Music</a>
+           <a href="#">Animate</a>
+           <form>
+               <input type="text" name="search" value="search" id="search">
+               <input type="button" name="submit" value="submit" id="submit">
+           </form> 
+        </div>
+        </div>
+        
+            <div id="side_left"></div>
+            <div id="side_right"></div>
+            <div class="main">
+            <div class="left">
+                <em>Super Man</em>
+                <img src="1.jpg" alt="">
+                <p>The following is a guest post by Sara Soueidan. I know Sara through all her excellent work 
+                    on CodePen. She was working on some custom HTML5 video controls and noticed 
+                    that the customizations were lost when the video went into full screen mode 
+                    (example of that happening). Digging into the shadow DOM, Sara finds a solution...
+                    If you've ever worked with HTML5 video then you have probably wondered how you get a bunch of control buttons, sliders,
+                     and slider thumbs on your page, when you’ve only added a single  tag to the DOM.
+                </p>
+            </div>
+            <div class="right">
+                <em>Super Women</em>
+                <img src="2.jpg" alt="">
+                <p>
+                    While working on a custom HTML5 video framework lately, 
+                    I stumbled upon an issue which a lot of designers 
+                    and developers stumble upon in this area. 
+                    Instead of displaying the custom controls I was working on, 
+                    native browser controls appeared on the video when it entered the full-screen mode.
+                     Like so many others, I searched around for answers to this problem but had no luck finding any.
+                     (Update: this bug is filed in the Chrome bug tracker).
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
